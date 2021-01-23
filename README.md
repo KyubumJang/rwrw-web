@@ -32,6 +32,8 @@ to be continued
 |  # 하위 컴포넌트 이름은 Page라는 접미어를 붙인다
 |- utils
 |  # 각종 유틸 로직 (mappers, types 등등)'
+|- styles
+|  # style 관련된 내용(컴포넌트, 함수 포함)
 |- App.tsx
 |  # App.tsx는 Context provider로서만 사용하도록 한다. 로직이 되는 코드는 작성하지 않는다.
 ```
