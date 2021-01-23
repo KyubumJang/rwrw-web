@@ -1,10 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+`;
 
 function App() {
   return (
-    <div>
-      Hello react
-    </div>
+    <Wrapper>
+      Hello react, and styled component
+    </Wrapper>
   );
 }
 
