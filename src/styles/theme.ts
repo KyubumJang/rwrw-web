@@ -49,20 +49,24 @@ Object.keys(sizes).reduce((acc: Media, label: string) => {
   return acc;
 }, media);
 
+const colors = {
+  primary: '#3bb2b8',
+
+  darkGrey: '#2d2c2c',
+  grey: '#C0C0C0',
+  lightGrey: '#fafafa',
+
+  alert: '#e02020',
+
+  white: '#ffffff',
+  transparent: 'transparent',
+};
+
 export const theme = {
-  colors: {
-    primary: '#3bb2b8',
-
-    darkGrey: '#2d2c2c',
-    grey: '#C0C0C0',
-    lightGrey: '#fafafa',
-
-    alert: '#e02020',
-
-    white: '#ffffff',
-    transparent: 'transparent',
-  },
+  colors,
   media,
 };
+
+export type ColorType = keyof typeof colors;
 
 export type ThemeType = typeof theme;
