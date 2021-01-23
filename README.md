@@ -13,6 +13,10 @@ yarn start
 * production
 to be continued
 
+## Basic rules
+### package install
+`yarn` 을 사용하여 install 하기 때문에 `npm install` 을 사용하는것을 **금지**한다
+
 ## Code Convention
 ### Dir 구조
 ```text
