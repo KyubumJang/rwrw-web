@@ -1,12 +1,12 @@
 import { css, CSSProp } from 'styled-components';
 
 const sizes: { [key: string]: number } = {
-  mobile: 320,
+  mobile: 360,
   tablet: 768,
   desktop: 1024,
 };
 
-type BackQuoteArgs = string[];
+type BackQuoteArgs = string[] | TemplateStringsArray[] | [TemplateStringsArray, string];
 
 interface Media {
   mobile: (...args: BackQuoteArgs) => CSSProp | undefined;
@@ -38,7 +38,7 @@ Object.keys(sizes).reduce((acc: Media, label: string) => {
       break;
     case 'mobile':
       acc.mobile = (...args: BackQuoteArgs): CSSProp => css`
-        @media only screen and (max-width: ${sizes.tablet}px) {
+        @media only screen and (max-width: ${sizes.mobile}px) {
           ${args}
         }
       `;
