@@ -4,7 +4,7 @@ import Text from '../components/Text/Text';
 
 const Wrapper = styled.div``;
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <Wrapper>
       <Text>끄적끄적 홈</Text>
@@ -12,4 +12,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;
