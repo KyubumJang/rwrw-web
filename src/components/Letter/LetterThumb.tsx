@@ -8,15 +8,15 @@ const Wrapper = styled.div``;
 
 const Writer = styled.div``;
 
-const Content = styled.div``;
+const Thumbnail = styled.div``;
 
-const Letter: React.FC<LetterProps> = ({ content, writer }) => {
+const LetterThumb: React.FC<LetterProps> = ({ thumbnail, writer }) => {
   return (
     <Wrapper>
       <Writer>{writer}</Writer>
-      <Content>{content}</Content>
+      <Thumbnail>{thumbnail}</Thumbnail>
     </Wrapper>
   );
 };
 
-export default Letter;
+export default LetterThumb;

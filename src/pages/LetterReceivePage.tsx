@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Letter from '../components/Letter/Letter';
+import LetterThumb from '../components/Letter/LetterThumb';
 import faker from 'faker';
 
 export interface LetterDataType {
@@ -25,7 +25,7 @@ const LetterReceivePage: React.FC = () => {
   return (
     <Wrapper>
       {letters.map((letter) => {
-        return <Letter key={letter.id} {...letter} />;
+        return <LetterThumb key={letter.id} {...letter} />;
       })}
     </Wrapper>
   );
