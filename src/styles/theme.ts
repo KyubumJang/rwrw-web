@@ -58,6 +58,7 @@ const colors = {
 
   alert: '#e02020',
 
+  black: '#000000',
   white: '#ffffff',
   transparent: 'transparent',
 };
