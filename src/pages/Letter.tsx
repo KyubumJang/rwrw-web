@@ -18,7 +18,6 @@ const Letter: React.FC = () => {
           onChange={handleLetter}
           value={letter}
         ></LetterInput>
-        {/* <div>오늘의 날씨</div> */}
       </LetterWrapper>
       <LetterSubmitBtn onClick={handleSubmit}>보내기</LetterSubmitBtn>
     </Wrapper>
@@ -52,7 +51,6 @@ const LetterTitle = styled.div`
 
 const LetterTo = styled.div`
   margin-top: 3rem;
-  /* margin-bottom: 1rem; */
 `;
 
 const LetterInput = styled.input`
@@ -67,18 +65,19 @@ const LetterInput = styled.input`
 
 const LetterSubmitBtn = styled.div`
   position: absolute;
-  bottom: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border: 1px solid #efefef;
-  font-size: 1.2rem;
-  border-radius: 3rem;
+  bottom: 5rem;
   width: 16rem;
   height: 4rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 3rem;
+  border: 1px solid #efefef;
   &:hover {
     background-color: ${({ theme }) => theme.colors.lightGrey};
-    border: 1px solid #ffffff;
+    border: 1px solid ${({ theme }) => theme.colors.black};
   }
 `;
