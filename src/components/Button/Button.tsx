@@ -36,7 +36,6 @@ const sizeStyles = css<SizeType>`
   ${({ btnSize }) =>
     btnSize === 'mid' &&
     css`
-      // size custom
       width: 16rem;
       height: 4rem;
       font-size: 1.2rem;
