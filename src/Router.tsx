@@ -1,15 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Header from '../src/components/Header/Header';
 import HomePage from './pages/HomePage';
-import Letter from './pages/Letter';
+import LetterPage from './pages/LetterPage';
 
 const Router: React.FC = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route exact path="/letter" component={Letter} />
-      <Route path="/">404 not found</Route>
-    </Switch>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/letter" component={LetterPage} />
+        <Route path="/">404 not found</Route>
+      </Switch>
+    </>
   );
 };
 

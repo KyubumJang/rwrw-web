@@ -6,7 +6,7 @@ import Button from '../components/Button/Button';
 
 const name = faker.name.firstName();
 
-const Letter: React.FC = () => {
+const LetterPage: React.FC = () => {
   const letterInput = useInput('');
   const handleSubmit = async () => {
     // TODO: 입력한 편지 제출 로직
@@ -27,7 +27,7 @@ const Letter: React.FC = () => {
   );
 };
 
-export default Letter;
+export default LetterPage;
 
 const Wrapper = styled.div`
   position: relative;
