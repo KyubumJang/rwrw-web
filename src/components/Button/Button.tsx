@@ -5,36 +5,36 @@ import { ColorType } from '../../styles/theme';
 export interface ButtonProps {
   bgColor?: ColorType;
   color?: ColorType;
-  size: string;
+  btnSize?: 'large' | 'mid';
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-type StyleType = Pick<ButtonProps, 'color' | 'bgColor' | 'size'>;
-type SizeType = Pick<ButtonProps, 'size'>;
-
-const Button: React.FC<ButtonProps> = ({ children, color, bgColor, size, ...rest }) => {
+type StyleType = Pick<ButtonProps, 'color' | 'bgColor' | 'btnSize'>;
+type SizeType = Pick<ButtonProps, 'btnSize'>;
+const Button: React.FC<ButtonProps> = ({ children, color, bgColor, btnSize, ...props }) => {
   return (
-    <Wrapper color={color} bgColor={bgColor} size={size} {...rest}>
+    <Wrapper color={color} bgColor={bgColor} btnSize={btnSize} {...props}>
       {children}
     </Wrapper>
   );
 };
 
 Button.defaultProps = {
-  color: 'lightGrey',
+  btnSize: 'mid',
 };
 
 export default Button;
 
 const sizeStyles = css<SizeType>`
-  ${({ size }) =>
-    size === 'large' &&
+  ${({ btnSize }) =>
+    btnSize === 'large' &&
     css`
       width: 16rem;
       height: 4rem;
       font-size: 1.2rem;
     `}
-  ${({ size }) =>
-    size === 'mid' &&
+  ${({ btnSize }) =>
+    btnSize === 'mid' &&
     css`
       // size custom
       width: 16rem;
@@ -52,7 +52,7 @@ const Wrapper = styled.div<StyleType>`
   cursor: pointer;
   color: ${({ theme, color }) => color || theme.colors.black};
   background-color: ${({ bgColor }) => bgColor};
-  ${sizeStyles}
+  ${sizeStyles};
   &:hover {
     background-color: ${({ theme }) => theme.colors.lightGrey};
     border: 1px solid ${({ theme }) => theme.colors.black};

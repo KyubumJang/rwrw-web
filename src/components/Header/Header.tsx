@@ -23,5 +23,4 @@ const Wrapper = styled.div`
 const Logo = styled.div`
   font-size: 1.6rem;
   font-weight: 500;
-  color: #000000;
 `;

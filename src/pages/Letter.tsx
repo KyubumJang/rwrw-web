@@ -2,21 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import useInput from '../hooks/useInput';
 import faker from 'faker';
+import Button from '../components/Button/Button';
+
+const name = faker.name.firstName();
 
 const Letter: React.FC = () => {
-  const [letter, handleLetter] = useInput('');
+  const letterInput = useInput('');
   const handleSubmit = async () => {
-    // 입력한 편지 제출 로직
+    // TODO: 입력한 편지 제출 로직
   };
   return (
     <Wrapper>
       <LetterWrapper>
         <LetterTitle>편지 쓰기</LetterTitle>
-        <LetterTo>{faker.name.firstName()}야,</LetterTo>
+        <LetterTo>{name},</LetterTo>
         <LetterInput
           placeholder="따뜻한 한마디를 입력해 주세요"
-          onChange={handleLetter}
-          value={letter}
+          onChange={letterInput.handler}
+          value={letterInput.value}
         ></LetterInput>
       </LetterWrapper>
       <LetterSubmitBtn onClick={handleSubmit}>보내기</LetterSubmitBtn>
@@ -63,21 +66,7 @@ const LetterInput = styled.input`
   font-size: 1rem;
 `;
 
-const LetterSubmitBtn = styled.div`
+const LetterSubmitBtn = styled(Button)`
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   bottom: 5rem;
-  width: 16rem;
-  height: 4rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border-radius: 3rem;
-  border: 1px solid #efefef;
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.lightGrey};
-    border: 1px solid ${({ theme }) => theme.colors.black};
-  }
 `;
