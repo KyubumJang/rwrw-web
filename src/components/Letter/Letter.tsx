@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LetterDataType } from '../../pages/LetterReceivePage';
+import { LetterDataType } from '../../pages/LettersPage';
 
 export interface LetterProps extends Omit<LetterDataType, 'id'> {}
 
