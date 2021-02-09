@@ -9,7 +9,7 @@ const LetterToRead = styled(Letter)``;
 const LetterReadPage: React.FC = () => {
   return (
     <Wrapper>
-      <LetterToRead />
+      <LetterToRead></LetterToRead>
     </Wrapper>
   );
 };
