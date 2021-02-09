@@ -3,7 +3,12 @@ import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { LetterDataType } from '../../constants/Letters';
 
-export interface LetterProps extends LetterDataType {}
+export interface LetterProps extends Omit<LetterDataType, 'content'> {
+  id: string;
+  thumbnail: string;
+  writer: string;
+}
+
 const Wrapper = styled.div``;
 
 const Writer = styled.div``;

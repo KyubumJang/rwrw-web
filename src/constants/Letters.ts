@@ -7,6 +7,13 @@ export interface LetterDataType {
   writer: string;
 }
 
+export const emptyLetter: LetterDataType = {
+  id: '',
+  content: '',
+  writer: '',
+  thumbnail: '',
+};
+
 export const letters: LetterDataType[] = [
   {
     content: faker.lorem.sentences(),
