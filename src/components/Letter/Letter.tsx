@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Text from '../Text/Text';
 import { LetterDataType } from '../../constants/Letters';
 
 export interface LetterProps extends Omit<LetterDataType, 'id'> {
@@ -17,7 +18,9 @@ const Content = styled.div``;
 const Letter: React.FC<LetterDataType> = ({ content, writer }) => {
   return (
     <Wrapper>
-      <Writer>{writer}</Writer>
+      <Text>
+        <Writer>{writer}</Writer>
+      </Text>
       <Content>{content}</Content>
     </Wrapper>
   );

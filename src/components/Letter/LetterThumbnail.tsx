@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { LetterDataType } from '../../constants/Letters';
+import Text from '../Text/Text';
 
 export interface LetterProps extends Omit<LetterDataType, 'content'> {
   id: string;
@@ -19,7 +20,9 @@ const LetterThumbnail: React.FC<LetterProps> = ({ thumbnail, writer, id }) => {
   const history = useHistory();
   return (
     <Wrapper onClick={() => history.push(`/letter-read/${id}`)}>
-      <Writer>{writer}</Writer>
+      <Text>
+        <Writer>{writer}</Writer>
+      </Text>
       <Thumbnail>{thumbnail}</Thumbnail>
     </Wrapper>
   );
