@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import KakaoLogin from 'react-kakao-login';
+import { Props as KaKaoLoginProps } from 'react-kakao-login/lib/types';
 
-const Login: React.FC = () => {
+interface LoginProps {
+  onLogin?: KaKaoLoginProps['onSuccess'];
+}
+
+const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const [data, setData] = useState();
 
   const responseKakao = (res: any) => {
     console.log(`kb ~ file: Login.tsx ~ line 11 ~ res`, res);
-    setData(res);
+    onLogin?.(res);
+    // setData(res);
   };
 
   const handleError = (err: any) => {
     console.log(`kb ~ file: Login.tsx ~ line 14 ~ err`, err);
-    alert(err);
+    // alert(err);
   };
   return (
     <Wrapper>
