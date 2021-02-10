@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Text from '../components/Text/Text';
-import Login from '../components/Text/Login';
+import Login from '../components/Login/Login';
 
 const Wrapper = styled.div``;
 
