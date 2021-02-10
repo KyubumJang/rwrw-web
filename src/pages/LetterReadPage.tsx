@@ -6,6 +6,8 @@ import { LetterDataType, letters, emptyLetter } from '../constants/Letters';
 
 const Wrapper = styled.div``;
 
+const ExitButton = styled.button``;
+
 const LetterReadPage: React.FC = () => {
   const history = useHistory();
   const letterId = history.location.pathname.substring(13);
@@ -14,6 +16,7 @@ const LetterReadPage: React.FC = () => {
   return (
     <Wrapper>
       <Letter {...letterToRead} />
+      <ExitButton onClick={() => history.goBack()}>Return to mailbox</ExitButton>
     </Wrapper>
   );
 };
