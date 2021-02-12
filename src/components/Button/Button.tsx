@@ -11,16 +11,12 @@ export interface ButtonProps {
 
 type StyleType = Pick<ButtonProps, 'color' | 'bgColor' | 'btnSize'>;
 type SizeType = Pick<ButtonProps, 'btnSize'>;
-const Button: React.FC<ButtonProps> = ({ children, color, bgColor, btnSize, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ children, color, bgColor, btnSize = 'mid', ...props }) => {
   return (
     <Wrapper color={color} bgColor={bgColor} btnSize={btnSize} {...props}>
       {children}
     </Wrapper>
   );
-};
-
-Button.defaultProps = {
-  btnSize: 'mid',
 };
 
 export default Button;

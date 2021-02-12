@@ -56,8 +56,9 @@ const LetterTo = styled.div`
   margin-top: 3rem;
 `;
 
-const LetterInput = styled.input`
+const LetterInput = styled.textarea`
   margin-top: 2rem;
+  resize: none;
   outline: none;
   width: 40rem;
   padding: 1rem;
