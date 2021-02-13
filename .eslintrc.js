@@ -23,7 +23,7 @@ module.exports = {
     'arrow-parens': ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-inferrable-types': 'off',

@@ -1,24 +1,34 @@
 # 끄적끄적 Web
+
 React.js / TypeScript
 
 ## How to run
+
 ### env 설정
+
 to be continued
 
 ### App 실행
-* local, dev
+
+- local, dev
+
 ```shell
 yarn start
 ```
-* production
-to be continued
+
+- production
+  to be continued
 
 ## Basic rules
+
 ### package install
+
 `yarn` 을 사용하여 install 하기 때문에 `npm install` 을 사용하는것을 **금지**한다
 
 ## Code Convention
+
 ### Dir 구조
+
 ```text
 - src
 |- components
@@ -39,8 +49,11 @@ to be continued
 ```
 
 ### 컴포넌트 내부 Wrapper 사용규칙
-- Container 
+
+- Container
+
   - 컴포넌트 내부에서 Wrapper를 사용한다.
+
   ```tsx
   // Bad Case
   function BadCase(): JSX.Element {
@@ -48,7 +61,7 @@ to be continued
       <div>
         <Wrapper></Wrapper>
       </div>
-    )
+    );
   }
   // Good Case
   function GoodCase(): JSX.Element {
@@ -56,6 +69,18 @@ to be continued
       <Wrapper>
         <SomeOtherWrapper></SomeOtherWrapper>
       </Wrapper>
-    )
+    );
+  }
+  ```
+
+  ### size 단위 규칙
+
+  - 모든 size 단위는 rem만 사용한다.
+    root(`GlobalStyle.ts`)에 `font-size: 10px`을 지정하여, 소수점 한자리를 당겨서 사용한다.
+    가령, `width: 24px` 인 경우 다음과 같이 사용한다.
+
+  ```css
+  .circle {
+    width: 2.4rem;
   }
   ```
