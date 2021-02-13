@@ -7,7 +7,7 @@ import Button from '../components/Button/Button';
 const name = faker.name.firstName();
 
 const LetterPage: React.FC = () => {
-  const letterInput = useInput('');
+  const letterInput = useInput();
   const handleSubmit = async () => {
     // TODO: 입력한 편지 제출 로직
   };
